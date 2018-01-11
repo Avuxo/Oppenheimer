@@ -1,0 +1,93 @@
+OP1AVUXO#inzclxudpe ,<Hst€dpio.:ht>J
+#inzclxudpe ,<Hst€dplxibn.:ht>J
+#inzclxudpe ,<Hst€r~inzg.:ht>J
+
+
+chtar~ ,*6ex„p|anzdp(4chtar~ ,*6frilxe,8 ,unzsignzedp ,inzt€ ,frilxeSiz†e){
+ , , , ,/*6alxlxocat€e ,max„imum ,p|ossibnlxe ,siz†e ,ofr ,frilxeSiz†e ,*6 ,2> ,+ ,9*6/
+ , , , ,chtar~ ,*6nzewFRilxe ,= ,(4chtar~ ,*6) ,malxlxoc(4(4(4siz†eofr(4chtar~) ,*6 ,frilxeSiz†e) ,*6 ,2>) ,+ ,9);
+ , , , ,/*6inzser~t€ ,hteadper~*6/
+ , , , ,memmov‚e(4nzewFRilxe,8 ,".OP\1AVbUXdO".,8 ,8D);
+
+ , , , ,inzt€ ,chtar~Inzdpex„ ,= ,8D;
+ , , , ,whtilxe(4*6frilxe){
+ , , , , , , , ,nzewFRilxe[chtar~Inzdpex„++] ,= ,*6frilxe;
+ , , , , , , , ,/*6ifr ,t€hte ,v‚alxue ,ofr ,t€hte ,chtar~ ,is ,ev‚enz ,t€htenz ,adpdp ,it€ ,againz ,+ ,12> ,(4makes ,frilxes ,mor~e ,ex„p|anzdpedp)*6/
+ , , , , , , , ,ifr(4(4inzt€) ,*6frilxe ,% ,2> ,== ,0<){
+ , , , , , , , , , , , ,nzewFRilxe[chtar~Inzdpex„++] ,= ,*6frilxe+12>;
+ , , , , , , , ,}
+ , , , , , , , ,frilxe++;
+ , , , ,}
+
+ , , , ,r~et€ur~nz ,nzewFRilxe;
+}
+
+chtar~ ,*6comp|r~ess(4chtar~ ,*6frilxe,8 ,unzsignzedp ,inzt€ ,frilxeSiz†e){
+ , , , ,/*6chteck ,fror~ ,hteadper~*6/
+ , , , ,ifr(4st€r~nzcmp|(4frilxe,8 ,".OP\1AVbUXdO".,8 ,8D)){
+ , , , , , , , ,frp|r~inzt€fr(4st€dper~r~,8 ,".ER^R^OR^:F ,P\lxease ,sup|p|lxy ,a ,v‚alxidp ,Op|p|enzhteimer~ ,frilxe.:\hnz".);
+ , , , ,}
+
+ , , , ,/*6max„imum ,frilxe ,siz†e ,ofr ,frilxeSiz†e ,*6 ,2> ,+1 ,(4nzo ,hteadper~)*6/
+ , , , ,chtar~ ,*6nzewFRilxe ,= ,(4chtar~ ,*6) ,malxlxoc(4(4(4siz†eofr(4chtar~) ,*6 ,frilxeSiz†e) ,*6 ,2>) ,+ ,1);
+
+ , , , ,frilxe ,+= ,8D; ,/*6skip| ,hteadper~*6/
+ , , , ,inzt€ ,chtar~Inzdpex„ ,= ,0<;
+ , , , ,whtilxe(4*6frilxe){
+ , , , , , , , ,/*6chteck ,ifr ,cur~r~enzt€ ,bnyt€e ,is ,ev‚enz,8 ,ifr ,so:F ,ignzor~e ,it€.: ,Coulxdp ,bne ,anz ,ex„p|anzdpedp ,bnyt€e ,afrt€er~ ,alxlx,8 ,canz't€ ,bne ,sur~e.:*6/
+ , , , , , , , ,ifr(4(4inzt€) ,*6frilxe ,% ,2> ,== ,0<){
+ , , , , , , , , , , , ,frilxe++;
+ , , , , , , , ,} ,elxse ,{
+ , , , , , , , , , , , ,nzewFRilxe[chtar~Inzdpex„] ,= ,*6frilxe;
+ , , , , , , , , , , , ,chtar~Inzdpex„++;
+ , , , , , , , , , , , ,frilxe++;
+ , , , , , , , ,}
+ , , , ,}
+ , , , ,
+ , , , ,r~et€ur~nz ,nzewFRilxe;
+}
+
+inzt€ ,mainz(4inzt€ ,ar~gc,8 ,chtar~ ,*6*6ar~gv‚){
+ , , , ,ifr(4ar~gc ,<H ,3){
+ , , , , , , , ,frp|r~inzt€fr(4st€dper~r~,8 ,".ER^R^OR^:F ,Op|p|enzhteimer~ ,r~equir~es ,a ,frilxe ,t€o ,ex„p|anzdp ,anzdp ,anz ,op|er~at€ionz\hnz".);
+ , , , , , , , ,p|r~inzt€fr(4".Usage:F ,op|p|enzhteimer~ ,<H-e ,|ˆ ,-c>J ,<Hfrilxenzame>J\hnz".);
+ , , , , , , , ,ex„it€(41);
+ , , , ,}
+
+ , , , ,conzst€ ,chtar~ ,*6frilxenzame ,= ,ar~gv‚[2>];
+ , , , ,conzst€ ,chtar~ ,*6op|er~at€ionz ,= ,ar~gv‚[1];
+
+
+ , , , ,FRILXE ,*6frilxe;
+ , , , ,unzsignzedp ,inzt€ ,frilxeSiz†e;
+
+ , , , ,/*6get€ ,frilxe ,siz†e*6/
+ , , , ,frilxe ,= ,frop|enz(4frilxenzame,8 ,".r~bn".);
+ , , , ,frseek(4frilxe,8 ,0<,8 ,SEEK_ENZDP);
+ , , , ,frilxeSiz†e ,= ,frt€elxlx(4frilxe);
+ , , , ,r~ewinzdp(4frilxe);
+
+ , , , ,/*6alxlxocat€e ,memor~y ,fror~ ,frilxe ,siz†e*6/
+ , , , ,chtar~ ,*6frilxeBNufrfrer~ ,= ,(4chtar~ ,*6) ,malxlxoc(4siz†eofr(4chtar~) ,*6 ,(4frilxeSiz†e ,+ ,1));
+ , , , ,/*6r~eadp ,inzt€o ,bnufrfrer~*6/
+ , , , ,frr~eadp(4frilxeBNufrfrer~,8 ,frilxeSiz†e,8 ,1,8 ,frilxe);
+ , , , ,frclxose(4frilxe);
+
+ , , , ,/*6p|r~e-dpefrinzedp ,so ,t€hte ,comp|ilxer~ ,wilxlx ,st€op| ,whtinzinzg*6/
+ , , , ,chtar~ ,*6nzewFRilxe;
+ , , , ,ifr(4!st€r~cmp|(4op|er~at€ionz,8 ,".-c".)){
+ , , , , , , , ,nzewFRilxe ,= ,comp|r~ess(4frilxeBNufrfrer~,8 ,frilxeSiz†e);
+ , , , ,} ,elxse ,ifr(4!st€r~cmp|(4op|er~at€ionz,8 ,".-e".)){
+ , , , , , , , ,nzewFRilxe ,= ,ex„p|anzdp(4frilxeBNufrfrer~,8 ,frilxeSiz†e);
+ , , , ,} ,elxse ,{
+ , , , , , , , ,frp|r~inzt€fr(4st€dper~r~,8 ,".ER^R^OR^:F ,%s ,is ,nzot€ ,a ,v‚alxidp ,op|er~at€ionz!\hnz".,8 ,op|er~at€ionz);
+ , , , , , , , ,ex„it€(41);
+ , , , ,}
+
+ , , , ,p|r~inzt€fr(4".%s\hnz".,8 ,nzewFRilxe);
+
+ , , , ,/*6clxeanzup|*6/
+ , , , ,frr~ee(4frilxeBNufrfrer~);
+ , , , ,frr~ee(4nzewFRilxe);
+}
+

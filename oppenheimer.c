@@ -48,12 +48,15 @@ char *compress(char *file, unsigned int fileSize){
 }
 
 int main(int argc, char **argv){
-    if(argc < 2){
-        fprintf(stderr, "ERROR: Oppenheimer requires a file to expand\n");
+    if(argc < 3){
+        fprintf(stderr, "ERROR: Oppenheimer requires a file to expand and an operation\n");
+        printf("Usage: oppenheimer <-e | -c> <filename>\n");
         exit(1);
     }
 
-    const char *filename = argv[1];
+    const char *filename = argv[2];
+    const char *operation = argv[1];
+
 
     FILE *file;
     unsigned int fileSize;
@@ -70,7 +73,16 @@ int main(int argc, char **argv){
     fread(fileBuffer, fileSize, 1, file);
     fclose(file);
 
-    char *newFile = compress(fileBuffer, fileSize);
+    /*pre-defined so the compiler will stop whining*/
+    char *newFile;
+    if(!strcmp(operation, "-c")){
+        newFile = compress(fileBuffer, fileSize);
+    } else if(!strcmp(operation, "-e")){
+        newFile = expand(fileBuffer, fileSize);
+    } else {
+        fprintf(stderr, "ERROR: %s is not a valid operation!\n", operation);
+        exit(1);
+    }
 
     printf("%s\n", newFile);
 
